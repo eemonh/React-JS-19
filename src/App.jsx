@@ -20,7 +20,6 @@ import NesLoop from './NesLoop.jsx'
 import UsEff from './UsEff.jsx'
 import UsEffa from './UsEffa.jsx'
 import LyfCyl from './LyfCyl.jsx'
-import UsEfflyf from './UsEffLyf.jsx'
 
 function App() {
   const [color, setColor] = useState("red");
@@ -81,7 +80,6 @@ function App() {
         <h1>useEffect Hooks for Life Cycle Methods in React JS</h1>
         <LyfCyl />
         <hr /><br />
-        <UsEffLyf />
 
     </div>
     
