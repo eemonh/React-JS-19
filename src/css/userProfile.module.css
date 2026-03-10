@@ -1,0 +1,21 @@
+.heading{
+    color:blueviolet;
+}
+
+.img-style{
+    width: 200px;
+    height: 200px;
+}
+.card{
+    border: 1px solid #2f1a89;
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px 1px #ba0ddcbd;
+
+}
+
+.textWrap{
+    padding: 10px;
+    color: #0e37dd;
+}

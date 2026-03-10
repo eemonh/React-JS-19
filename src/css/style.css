@@ -1,3 +1,25 @@
 .heading{
     color: green;
 }
+
+.img-style{
+    width: 200px;
+    height: 200px;
+}
+
+.pepe-card{
+    margin: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    padding: 10px;
+}
+
+.text-wrap{
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}

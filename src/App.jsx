@@ -22,9 +22,12 @@ import UsEffa from "./UsEffa.jsx";
 import LyfCyl from "./LyfCyl.jsx";
 import catImage from "./assets/538-5383561_good-morning-funny-cat-png-download-business-cat.png";
 import warCat from "./assets/warCat.png";
+import ducky from "./assets/ducky.png";
+import yoduck from "./assets/yoduck.png";
 import squid from "./assets/squidward.png";
-import './css/style.css'
-
+import "./css/style.css";
+import pepe from "./assets/pepe.jpg";
+import UserProfile from "./UserProfile.jsx";
 
 function App() {
   const [color, setColor] = useState("red");
@@ -54,7 +57,7 @@ function App() {
     });
   };
 
-  const [grid, setGrid] = useState(true)
+  const [grid, setGrid] = useState(true);
 
   return (
     <div>
@@ -163,6 +166,38 @@ function App() {
               <p>MEOWWW</p>
             </div>
           </div>
+          <div style={cardStyle}>
+            <img
+              style={{ width: "400px", height: "400px" }}
+              src={ducky}
+              alt="quack"
+            />
+            <div
+              style={{
+                padding: "10px",
+                margin: "10px",
+              }}
+            >
+              <h4>ducky duck</h4>
+              <p>Chiki chiki</p>
+            </div>
+          </div>
+          <div style={cardStyle}>
+            <img
+              style={{ width: "400px", height: "400px" }}
+              src={yoduck}
+              alt="quckkk"
+            />
+            <div
+              style={{
+                padding: "10px",
+                margin: "10px",
+              }}
+            >
+              <h4>yoyo duck</h4>
+              <p>Distin distin mama</p>
+            </div>
+          </div>
         </div>
       </>
       <hr />
@@ -176,54 +211,54 @@ function App() {
         <button onClick={() => updateTheme("black", "white")}>
           Default theme
         </button>
-        <button onClick={()=>setGrid(!grid)}>Toggle Grid</button>
-        <div style={{ display: grid? 'flex':'block', flexWrap: "wrap" }}>
+        <button onClick={() => setGrid(!grid)}>Toggle Grid</button>
+        <div style={{ display: grid ? "flex" : "block", flexWrap: "wrap" }}>
           <div style={cardStyleDyna}>
             <img style={{ width: "200px" }} src={squid} alt="squid" />
             <div style={{ padding: "10px", margin: "10px" }}>
-              <h4>I am a squid</h4>
+              <h4>It's squidward</h4>
+              <p>Oh my gosh</p>
+            </div>
+          </div>
+          <div style={cardStyleDyna}>
+            <img style={{ width: "200px" }} src={squid} alt="squid" />
+            <div style={{ padding: "10px", margin: "10px" }}>
+              <h4>It's squidward</h4>
+              <p>Oh my gosh</p>
+            </div>
+          </div>
+          <div style={cardStyleDyna}>
+            <img style={{ width: "200px" }} src={squid} alt="squid" />
+            <div style={{ padding: "10px", margin: "10px" }}>
+              <h4>It's squidward</h4>
               <p>squid squid</p>
             </div>
           </div>
           <div style={cardStyleDyna}>
             <img style={{ width: "200px" }} src={squid} alt="squid" />
             <div style={{ padding: "10px", margin: "10px" }}>
-              <h4>I am a squid</h4>
+              <h4>It's squidward</h4>
               <p>squid squid</p>
             </div>
           </div>
           <div style={cardStyleDyna}>
             <img style={{ width: "200px" }} src={squid} alt="squid" />
             <div style={{ padding: "10px", margin: "10px" }}>
-              <h4>I am a squid</h4>
+              <h4>It's squidward</h4>
               <p>squid squid</p>
             </div>
           </div>
           <div style={cardStyleDyna}>
             <img style={{ width: "200px" }} src={squid} alt="squid" />
             <div style={{ padding: "10px", margin: "10px" }}>
-              <h4>I am a squid</h4>
+              <h4>It's squidward</h4>
               <p>squid squid</p>
             </div>
           </div>
           <div style={cardStyleDyna}>
             <img style={{ width: "200px" }} src={squid} alt="squid" />
             <div style={{ padding: "10px", margin: "10px" }}>
-              <h4>I am a squid</h4>
-              <p>squid squid</p>
-            </div>
-          </div>
-          <div style={cardStyleDyna}>
-            <img style={{ width: "200px" }} src={squid} alt="squid" />
-            <div style={{ padding: "10px", margin: "10px" }}>
-              <h4>I am a squid</h4>
-              <p>squid squid</p>
-            </div>
-          </div>
-          <div style={cardStyleDyna}>
-            <img style={{ width: "200px" }} src={squid} alt="squid" />
-            <div style={{ padding: "10px", margin: "10px" }}>
-              <h4>I am a squid</h4>
+              <h4>It's squidward</h4>
               <p>squid squid</p>
             </div>
           </div>
@@ -232,10 +267,117 @@ function App() {
       <hr />
       <br />
       <h1 className="heading">External Style</h1>
-      <div>
-        <div>
-          <img src="" alt="" />
+      <div className="container">
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
         </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        <div className="pepe-card">
+          <div>
+            <img className="img-style" src={pepe} alt="pepe" />
+          </div>
+          <div className="text-wrap">
+            <h4>pepe</h4>
+            <p>smile please</p>
+          </div>
+        </div>
+        
+      </div>
+      <hr /><br />
+      <h1 style={{color: "rgba(255, 0, 0, 0.36)"}}>Style With CSS Module in React</h1>
+      <div style={{display: "flex", flexWrap: "wrap", width: "100%"}}>
+        <UserProfile />
+      <UserProfile />
+      <UserProfile />
+      <UserProfile />
+      <UserProfile />
+      <UserProfile />
       </div>
     </div>
   );
