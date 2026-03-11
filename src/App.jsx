@@ -32,6 +32,10 @@ import UsRef from "./usRef.jsx";
 import UnCnrltComp from "./UnCntrlComp.jsx";
 import PassFunc from "./PassFunc.jsx";
 import Customerform from "./Customerform.jsx";
+import UsTran from "./UsTran.jsx";
+import UstTrans from "./UstTrans.jsx";
+import Derived from "./Derived.jsx";
+import UpObj from "./UpObj.jsx";
 
 
 function App() {
@@ -413,6 +417,15 @@ function App() {
               <Customerform />
         </form>
       </div>
+      <hr /><br />
+      <UsTran />
+      <hr /><br />
+      <UstTrans />
+      <hr /><br />
+      <Derived />
+      <hr /><br />
+      <UpObj />
+      <hr /><br />
 
     </div>
   );
