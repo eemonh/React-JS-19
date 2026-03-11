@@ -28,6 +28,11 @@ import squid from "./assets/squidward.png";
 import "./css/style.css";
 import pepe from "./assets/pepe.jpg";
 import UserProfile from "./UserProfile.jsx";
+import UsRef from "./usRef.jsx";
+import UnCnrltComp from "./UnCntrlComp.jsx";
+import PassFunc from "./PassFunc.jsx";
+import Customerform from "./Customerform.jsx";
+
 
 function App() {
   const [color, setColor] = useState("red");
@@ -58,6 +63,18 @@ function App() {
   };
 
   const [grid, setGrid] = useState(true);
+
+  const displayName=(name)=>{
+    alert(name);
+  }
+  const getUser=()=>{
+    alert("get user function")
+  }
+
+  const handleSubmit =async () =>{
+    await new Promise(res => setTimeout(res, 3000));
+  }
+
 
   return (
     <div>
@@ -371,7 +388,7 @@ function App() {
       </div>
       <hr /><br />
       <h1 style={{color: "rgba(255, 0, 0, 0.36)"}}>Style With CSS Module in React</h1>
-      <div style={{display: "flex", flexWrap: "wrap", width: "100%"}}>
+      <div style={{display: "flex", flexWrap: "wrap", width: "100%"}}> 
         <UserProfile />
       <UserProfile />
       <UserProfile />
@@ -379,6 +396,24 @@ function App() {
       <UserProfile />
       <UserProfile />
       </div>
+      <hr /><br />
+      <UsRef />
+      <hr /><br />
+      <UnCnrltComp />
+      <hr /><br />
+      <h1>Call Parent component funtion from child component</h1>
+      <PassFunc displayName={displayName} name="Zahir Hossain" getUser={getUser}/>
+      <PassFunc displayName={displayName} name ="Micky Mouse"getUser={getUser}/>
+      <PassFunc displayName={displayName} name="Daffy Duck" getUser={getUser}/>
+      <PassFunc displayName={displayName} name="Bugs Bunny" getUser={getUser}/>
+      <hr /><br />
+      <div>
+        <h1>useFormStatus hook in React Js</h1>
+        <form action={handleSubmit}>
+              <Customerform />
+        </form>
+      </div>
+
     </div>
   );
 }
