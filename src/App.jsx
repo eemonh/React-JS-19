@@ -36,6 +36,10 @@ import UsTran from "./UsTran.jsx";
 import UstTrans from "./UstTrans.jsx";
 import Derived from "./Derived.jsx";
 import UpObj from "./UpObj.jsx";
+import UpdatingUseState from "./UpdatingUseState.jsx";
+import UpdateArr from "./UpdateArr.jsx";
+import UseAction from "./UseAtion.jsx";
+import UseId from "./UseId.jsx";
 
 
 function App() {
@@ -426,6 +430,15 @@ function App() {
       <hr /><br />
       <UpObj />
       <hr /><br />
+      <UpdatingUseState />
+      <hr /><br />
+      <UpdateArr />
+      <hr /><br />
+      <UseAction />
+      <hr /><br />
+      <UseId />
+      <hr /><br />
+      
 
     </div>
   );
