@@ -10,7 +10,7 @@ function Parent() {
     return (
         <div>
             <h1>useMemo example</h1>
-            <h2>Parent Compound</h2>
+            <h2>Parent</h2>
             <h2>Parent Count : {count}</h2>
             <button onClick={()=>setCount(count + 1)}>Increase Count</button>
             <Child user={user} />
