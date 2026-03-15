@@ -46,6 +46,8 @@ import useToggle from "./useToggle.jsx";
 import WithoutUseMemo from "./WithoutUseMemo.jsx";
 import WithUseMemo from "./WithUseMemo.jsx";
 import Parent from "./Parent.jsx";
+import UseCallBack from "./UseCallBack.jsx";
+import ParentUCB from "./ParentUCB.jsx";
 
 function App() {
   const [data, setData] = useToggle(true);
@@ -504,6 +506,10 @@ function App() {
               <WithUseMemo />
               <hr /><br />
               <Parent />
+              <hr /><br />
+              <h1>useCallback</h1>
+              <UseCallBack />
+              <ParentUCB />
     </div>
   );
 }
