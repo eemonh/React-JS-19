@@ -40,9 +40,17 @@ import UpdatingUseState from "./UpdatingUseState.jsx";
 import UpdateArr from "./UpdateArr.jsx";
 import UseAction from "./UseAtion.jsx";
 import UseId from "./UseId.jsx";
-
+import Colleg from "./Colleg.jsx";
+import { SubjectContext } from "./ContextApi.jsx";
+import useToggle from "./useToggle.jsx";
+import WithoutUseMemo from "./WithoutUseMemo.jsx";
+import WithUseMemo from "./WithUseMemo.jsx";
+import Parent from "./Parent.jsx";
 
 function App() {
+  const [data, setData] = useToggle(true);
+  const [value, toggleValue] = useToggle(true);
+  const [subject, setSubject] = useState("");
   const [color, setColor] = useState("red");
   const [usfa, setUsfa] = useState(0);
   const [usfb, setUsfb] = useState(0);
@@ -72,17 +80,16 @@ function App() {
 
   const [grid, setGrid] = useState(true);
 
-  const displayName=(name)=>{
+  const displayName = (name) => {
     alert(name);
-  }
-  const getUser=()=>{
-    alert("get user function")
-  }
+  };
+  const getUser = () => {
+    alert("get user function");
+  };
 
-  const handleSubmit =async () =>{
-    await new Promise(res => setTimeout(res, 3000));
-  }
-
+  const handleSubmit = async () => {
+    await new Promise((res) => setTimeout(res, 3000));
+  };
 
   return (
     <div>
@@ -392,54 +399,111 @@ function App() {
             <p>smile please</p>
           </div>
         </div>
-        
       </div>
-      <hr /><br />
-      <h1 style={{color: "rgba(255, 0, 0, 0.36)"}}>Style With CSS Module in React</h1>
-      <div style={{display: "flex", flexWrap: "wrap", width: "100%"}}> 
+      <hr />
+      <br />
+      <h1 style={{ color: "rgba(255, 0, 0, 0.36)" }}>
+        Style With CSS Module in React
+      </h1>
+      <div style={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
         <UserProfile />
-      <UserProfile />
-      <UserProfile />
-      <UserProfile />
-      <UserProfile />
-      <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
       </div>
-      <hr /><br />
+      <hr />
+      <br />
       <UsRef />
-      <hr /><br />
+      <hr />
+      <br />
       <UnCnrltComp />
-      <hr /><br />
+      <hr />
+      <br />
       <h1>Call Parent component funtion from child component</h1>
-      <PassFunc displayName={displayName} name="Zahir Hossain" getUser={getUser}/>
-      <PassFunc displayName={displayName} name ="Micky Mouse"getUser={getUser}/>
-      <PassFunc displayName={displayName} name="Daffy Duck" getUser={getUser}/>
-      <PassFunc displayName={displayName} name="Bugs Bunny" getUser={getUser}/>
-      <hr /><br />
+      <PassFunc
+        displayName={displayName}
+        name="Zahir Hossain"
+        getUser={getUser}
+      />
+      <PassFunc
+        displayName={displayName}
+        name="Micky Mouse"
+        getUser={getUser}
+      />
+      <PassFunc displayName={displayName} name="Daffy Duck" getUser={getUser} />
+      <PassFunc displayName={displayName} name="Bugs Bunny" getUser={getUser} />
+      <hr />
+      <br />
       <div>
         <h1>useFormStatus hook in React Js</h1>
         <form action={handleSubmit}>
-              <Customerform />
+          <Customerform />
         </form>
       </div>
-      <hr /><br />
+      <hr />
+      <br />
       <UsTran />
-      <hr /><br />
+      <hr />
+      <br />
       <UstTrans />
-      <hr /><br />
+      <hr />
+      <br />
       <Derived />
-      <hr /><br />
+      <hr />
+      <br />
       <UpObj />
-      <hr /><br />
+      <hr />
+      <br />
       <UpdatingUseState />
-      <hr /><br />
+      <hr />
+      <br />
       <UpdateArr />
-      <hr /><br />
+      <hr />
+      <br />
       <UseAction />
-      <hr /><br />
+      <hr />
+      <br />
       <UseId />
-      <hr /><br />
-      
-
+      <hr />
+      <br />
+      <div style={{backgroundColor: 'green', padding: 10}}>
+      <SubjectContext.Provider value={subject}>
+        <select value={subject} onChange={(event)=>setSubject(event.target.value)}>
+          <option value="Physics">Physics</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Biology">Biology</option>
+          <option value="Maths">Math</option>
+        </select>
+      <h1 >Context Api</h1>
+      <button onClick={()=>setSubject("")}>Clear</button>
+      <Colleg />
+      </SubjectContext.Provider>
+      </div>
+      <hr />
+      <br />
+      <div>
+              <button onClick={toggleValue}>Toggle Heading</button>
+              <button onClick={()=>toggleValue(false)}>Hide Heading</button> 
+              <button onClick={()=>toggleValue(true)}>Show Heading</button>
+              {
+                value? <h1>Custom Hooks in React JS</h1>:null
+              }
+              <hr />
+              <button onClick={setData}>Toggle Heading</button>
+              <button onClick={()=>setData(false)}>Hide Heading</button> 
+              <button onClick={()=>setData(true)}>Show Heading</button>
+              {
+                data? <h1>Testing another custom hook</h1>:null
+              }
+      </div>
+              <hr /><br />
+              <h1>useMemo</h1>
+              <WithoutUseMemo />
+              <WithUseMemo />
+              <hr /><br />
+              <Parent />
     </div>
   );
 }
